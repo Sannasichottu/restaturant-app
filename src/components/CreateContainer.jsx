@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -24,6 +25,7 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [{foodItems}, dispatch] = useStateValue();
 
   const uploadImage = (e) => {
@@ -33,6 +35,7 @@ const CreateContainer = () => {
     const uploadTask = uploadBytesResumable(storageRef, imageFile);
 
     uploadTask.on('state_changed', (snapshot) => {
+      // eslint-disable-next-line no-unused-vars
       const uploadProgress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
     }, (error) => {
       console.log(error);
@@ -214,6 +217,7 @@ const CreateContainer = () => {
               ) : (
                 <>
                   <div className="relative h-full">
+                   
                     <img
                       src={imageAsset}
                       alt="uploaded image"

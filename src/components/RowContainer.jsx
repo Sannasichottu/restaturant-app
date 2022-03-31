@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useRef, useState } from "react";
 import { MdShoppingBasket } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -27,6 +28,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
 
 useEffect(() => {
   addtoCart()
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[items])
 
 

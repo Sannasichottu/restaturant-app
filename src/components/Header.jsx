@@ -20,6 +20,7 @@ const Header = () => {
 
   const login = async () => {
     if(!user){
+      // eslint-disable-next-line no-unused-vars
       const {user:{refreshToken, providerData}} = await signInWithPopup(firebaseAuth, provider);
     dispatch({
       type: actionType.SET_USER,

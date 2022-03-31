@@ -28,7 +28,8 @@ const CartContainer = () => {
         },0);
         setTot(totalPrice);
         console.log(tot);
-    },[tot, flag]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[tot,flag]);
 
     const clearCart = () => {
         dispatch({

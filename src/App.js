@@ -7,6 +7,7 @@ import { getAllFoodItems } from './utils/firebaseFunction';
 import { actionType } from './context/reducer';
 
 const App = () => {
+  // eslint-disable-next-line no-unused-vars
   const [{foodItems}, dispatch] = useStateValue();
 
   const fetchData = async () => {
@@ -20,6 +21,7 @@ const App = () => {
 
   useEffect(() => {
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
